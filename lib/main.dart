@@ -20,7 +20,9 @@ class MeuApp extends StatelessWidget {
                 color: Colors.blueAccent,
               )
             ],
-          ))),
+          )
+        )
+      ),
     );
   }
 
