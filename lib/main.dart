@@ -10,23 +10,42 @@ class MeuApp extends StatelessWidget {
           appBar: AppBar(
             title: Text('Meu PrimeiroAPP'),
           ),
-          body: Center(
-              child: Column(
+          body: Column(
             children: <Widget>[
-              Text('Click no botão a baixo:'),
-              FlatButton(
-                child: Text('Click Aqui'),
-                onPressed: botaoAction,
-                color: Colors.blueAccent,
+              Row(
+                children: [
+                  Name()
+                ],
+              ),
+              Row(
+                children: [
+                  Name(),
+                ]
               )
             ],
           )
-        )
-      ),
+      )
     );
   }
+}
 
-  botaoAction() {
-    print("Clickou no botão");
+class Name extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      color: Colors.red,
+      padding: EdgeInsets.all(10),
+      margin: EdgeInsets.all(10),
+      child: Column(
+        children: [
+          Text('Texto de Exemplo'),
+          FlatButton(
+            child: Text('Click Aqui'),
+            
+          )
+        ],
+      ),
+    );
   }
 }
